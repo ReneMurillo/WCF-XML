@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceProduct" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:57658/ServiceProduct.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:57658/ServiceProduct.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:57658/ServiceProduct.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ProductosService.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceProduct_CrearCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_CrearCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_ActualizarCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_ActualizarCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_EliminarCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_EliminarCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_ListarCategorias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCategorias" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_ListarCategorias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCategoriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_VerCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_VerCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_CrearProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearProducto" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_CrearProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_ActualizarProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProducto" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_ActualizarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_EliminarProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarProducto" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_EliminarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_ListarProductos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarProductos" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_ListarProductos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_VerProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerProducto" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_VerProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_Filtrar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Filtrar" />
+  </wsdl:message>
+  <wsdl:message name="IServiceProduct_Filtrar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FiltrarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceProduct">
+    <wsdl:operation name="CrearCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/CrearCategoria" message="tns:IServiceProduct_CrearCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/CrearCategoriaResponse" message="tns:IServiceProduct_CrearCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/ActualizarCategoria" message="tns:IServiceProduct_ActualizarCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/ActualizarCategoriaResponse" message="tns:IServiceProduct_ActualizarCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/EliminarCategoria" message="tns:IServiceProduct_EliminarCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/EliminarCategoriaResponse" message="tns:IServiceProduct_EliminarCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCategorias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/ListarCategorias" message="tns:IServiceProduct_ListarCategorias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/ListarCategoriasResponse" message="tns:IServiceProduct_ListarCategorias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/VerCategoria" message="tns:IServiceProduct_VerCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/VerCategoriaResponse" message="tns:IServiceProduct_VerCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/CrearProducto" message="tns:IServiceProduct_CrearProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/CrearProductoResponse" message="tns:IServiceProduct_CrearProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/ActualizarProducto" message="tns:IServiceProduct_ActualizarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/ActualizarProductoResponse" message="tns:IServiceProduct_ActualizarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/EliminarProducto" message="tns:IServiceProduct_EliminarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/EliminarProductoResponse" message="tns:IServiceProduct_EliminarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarProductos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/ListarProductos" message="tns:IServiceProduct_ListarProductos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/ListarProductosResponse" message="tns:IServiceProduct_ListarProductos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/VerProducto" message="tns:IServiceProduct_VerProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/VerProductoResponse" message="tns:IServiceProduct_VerProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Filtrar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceProduct/Filtrar" message="tns:IServiceProduct_Filtrar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceProduct/FiltrarResponse" message="tns:IServiceProduct_Filtrar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceProduct" type="tns:IServiceProduct">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearCategoria">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/CrearCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoria">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/ActualizarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCategoria">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/EliminarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCategorias">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/ListarCategorias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerCategoria">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/VerCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearProducto">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/CrearProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProducto">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/ActualizarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProducto">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/EliminarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarProductos">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/ListarProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerProducto">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/VerProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Filtrar">
+      <soap:operation soapAction="http://tempuri.org/IServiceProduct/Filtrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceProduct">
+    <wsdl:port name="BasicHttpBinding_IServiceProduct" binding="tns:BasicHttpBinding_IServiceProduct">
+      <soap:address location="http://localhost:57658/ServiceProduct.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

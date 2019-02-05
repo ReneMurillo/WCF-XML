@@ -1,0 +1,63 @@
+﻿@model List<ClienteAspNet.Models.ProductosView>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Productos</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <p>
+            @Html.ActionLink("Crear nuevo", "Create", new { }, new { @class = "btn btn-primary"})
+        </p>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        @using (Html.BeginForm())
+        {
+            <div class="form-inline">
+                <input type="text" name="Parametro" class="form-control" placeholder="Nombre del producto" />
+                <input type="submit" value="Buscar" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <table class="table">
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Precio
+            </th>
+            <th>
+                Stock
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stock)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ProductoId }, new { @class = "btn btn-warning" }) |
+                    @Html.ActionLink("Detalle", "Details", new { id = item.ProductoId }, new { @class = "btn btn-success" }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.ProductoId }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
